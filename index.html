@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Formulaire</title>
+</head>
+
+<body>
+
+<h2>Les formulaires en HTML 5</h2>
+
+
+<p>Qu'est-ce qu'un formulaire ?
+C'est la base pour des échanges entre le visiteur et le site web.</p>
+
+<p>Javascript associé aux formulaires permet :</p>
+
+	<ul>
+		<li>d'assister et de guider le visiteur</li>
+	    <li>de contrôler la saisie</li>
+	    <li>de faire des traitements (calcul, manipulation, de caractères)</li>
+	    <li>d'envoyer les résultats au serveur</li>
+	</ul>
+
+	<p><img src="images/danger.png" id="danger"> Il ne communique pas avec les bases de données</p>
+
+	<p>un formulaire doit être encadré par des balises &lt;form&gt;  &lt;/form&gt; </p>
+
+	<h3>Code HTML 5 du formulaire</h3>
+
+	
+	<pre>
+
+	&lt;form id="formulaire" name="formulaire" method="POST"&gt;
+	&lt;!-- Il existe 2 méthodes pour envoyer un formulaire : GET et POST. C'est POST qui est le plus souvent utilisé --&gt;	
+			
+		&lt;input type="text" id="nom" name="nom" placeholder="Entrez votre nom" required&gt;nom&lt;/input&gt;&lt;br&gt;
+		&lt;!-- le type text est un champ de texte simple. Placeholder est le texte qui apparait en grisé dans le champ. Required est un attribut qui signifie que l'utilisateur doit obligatoirement remplir ce champ --&gt;
+
+		&lt;input type="email" id="mail" name="mail" placeholder="Entrez votre mail"&gt;email&lt;/input&gt;&lt;br&gt;
+		&lt;!-- le type email demande à l'utilisateur de rentrer une addresse email valide --&gt;
+
+		&lt;input type="url" id="site" name="site" placeholder="Entrez l'addresse de votre site"&gt;site web&lt;/input&gt;&lt;br&gt;
+		&lt;!-- url, vous vous en doutez, non ? --&gt;
+
+		&lt;input type="password" id="password" name="password" placeholder="Entrez un mot de passe" onchange="controle()"&gt;mot de passe (8 
+		caractères minimum)&lt;/input&gt;&lt;br&gt;
+		&lt;!-- pour le mot de passe, les caractères sont remplacés par des points. Le onchange appelle une fonction javascript qui s'exécute lorsque l'utilisateur modifie le contenu de ce champ--&gt;
+
+		&lt;input type="checkbox" id="check" name="check"&gt;J'accepte les termes du contrat utilisateur&lt;/input&gt;&lt;br&gt;
+		&lt;!-- des cases à cocher, plusieurs peuvent être cochées simultanément --&gt;
+
+		&lt;input type="radio" id="radio1" name='radio' checked&gt;Bouton radio 1&lt;/input&gt;&lt;br&gt;
+		&lt;input type="radio" id='radio2' name='radio'&gt;Bouton radio 2 &lt;/input&gt;&lt;br&gt;
+		&lt;!-- des boutons radio, un seul peut être coché. Il faut tous qu'ils aient le même attribut name. Checked signifie qu'il est coché --&gt;
+
+		&lt;input type="submit" id="bouton" name="bouton" value="Valider l'inscription"&gt;&lt;/input&gt;&lt;br&gt;
+		&lt;!-- le bouton pour envoyer le formulaire --&gt;	
+
+	&lt;/form&gt;
+
+	</pre>
+
+	<h3>Le formulaire</h3>
+
+	<form id="formulaire" name="formulaire" method="POST">
+	<!-- Il existe 2 méthodes pour envoyer un formulaire : GET et POST. C'est POST qui est le plus souvent utilisé -->	
+			
+		<p>nom<br/>
+		<input type="text" id="nom" name="nom" placeholder="Entrez votre nom" required></input></p>
+		<!-- le type text est un champ de texte simple. Placeholder est le texte qui apparait en grisé dans le champ. Required est un attribut qui signifie que l'utilisateur doit obligatoirement remplir ce champ -->
+
+		<p>email<br/>
+		<input type="email" id="mail" name="mail" placeholder="Entrez votre mail"></input><p>
+		<!-- le type email demande à l'utilisateur de rentrer une addresse email valide -->
+
+		<p>site web<br/>
+		<input type="url" id="site" name="site" placeholder="Entrez l'addresse de votre site"></input><p>
+		<!-- url, vous vous en doutez, non ? -->
+
+		<p>mot de passe (8 caractères minimum)<br/>
+		<input type="password" id="password" name="password" placeholder="Entrez un mot de passe" onchange="controle()"></input><p>
+		<!-- pour le mot de passe, les caractères sont remplacés par des points. Le onchange appelle une fonction javascript qui s'exécute lorsque l'utilisateur modifie le contenu de ce champ-->
+
+		<input type="checkbox" id="check" name="check">J'accepte les termes du contrat utilisateur</input><br><br>
+		<!-- des cases à cocher, plusieurs peuvent être cochées simultanément -->
+
+		<input type="radio" id="radio1" name='radio' checked>Bouton radio 1</input><br>
+		<input type="radio" id='radio2' name='radio'>Bouton radio 2 </input><br><br>
+		<!-- des boutons radio, un seul peut être coché. Il faut tous qu'ils aient le même attribut name. Checked signifie qu'il est coché -->
+
+		<input type="submit" id="bouton" name="bouton" value="Valider l'inscription"></input><br>
+		<!-- le bouton pour envoyer le formulaire -->	
+
+	</form>
+
+	<p>Il existe d'autres types de champs, d'attributs et d'évenements. Vous trouverez plus de détails sur ces liens :<p>
+	<ul>
+		<li><a href="http://dmouronval.developpez.com/tutoriels/html/formulaires-html5/#LII-C">les attributs et types de champs</a></li>
+		<li><a href="http://www.commentcamarche.net/contents/573-javascript-les-evenements">les evenements</a></li>
+	</ul>
+	
+	<script src="formulaire.js"></script>
+
+</body>
+
+</html>
